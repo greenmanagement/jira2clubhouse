@@ -22,6 +22,9 @@ Jira2clubhouse --project KEY1 KEY2 --log INFO --mapping config-file.json --jira_
     * In Jira: the projects are the ultimate containers, Epics and Issues are all inside a project
     * In Clubhouse: the Epics may span across several projects, the containers are the "Workspaces"
     * This software maps anyway Jira projects to Clubhouse projects; if you use the same workspace, then all your migrations will appear as projects in the same workspace; but nothing prevents you from migrating each project in a separate workspace.
+    * Another consequence:
+	    * Cause: in Clubhouse, an Epic is not "within" a project and it will appear on the project page only if it contains story that belong to the project
+	    * A Jira Epic that contains no stories will not appear in the clubhouse project after migration
 2. Sprints in Jira do not need to have start and end dates; hence they may not be mapped to Clubhouse iterations for the moment
     * the program will simply add a "Sprint" tag to identify the original Jira sprint; 
     * You may search for such tags and create your own iterations
